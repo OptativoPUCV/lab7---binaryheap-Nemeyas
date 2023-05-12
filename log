@@ -102,3 +102,33 @@ heap.c:28:7: error: unused variable ‘i’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 d544209
+Fri 12 May 2023 12:20:34 AM UTC: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+heap.c: In function ‘heap_push’:
+heap.c:29:9: error: expected expression before ‘)’ token
+   29 |   while(){ //pensando en el ciclo
+      |         ^
+heap.c:31:7: error: ‘Heap’ {aka ‘struct Heap’} has no member named ‘priority’
+   31 |     pq->priority[]= pq->priority[];
+      |       ^~
+heap.c:31:18: error: expected expression before ‘]’ token
+   31 |     pq->priority[]= pq->priority[];
+      |                  ^
+heap.c:31:23: error: ‘Heap’ {aka ‘struct Heap’} has no member named ‘priority’
+   31 |     pq->priority[]= pq->priority[];
+      |                       ^~
+heap.c:32:7: error: ‘Heap’ {aka ‘struct Heap’} has no member named ‘priority’
+   32 |     pq->priority = aux;
+      |       ^~
+heap.c:32:20: error: ‘aux’ undeclared (first use in this function)
+   32 |     pq->priority = aux;
+      |                    ^~~
+heap.c:32:20: note: each undeclared identifier is reported only once for each function it appears in
+heap.c:28:7: error: unused variable ‘i’ [-Werror=unused-variable]
+   28 |   int i=pq->size;
+      |       ^
+cc1: all warnings being treated as errors
+Compilation failed
+d4cca96
