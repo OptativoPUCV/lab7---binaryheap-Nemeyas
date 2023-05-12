@@ -424,3 +424,13 @@ heap.c:53:14: error: unused variable ‘aux’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 f582bd4
+Fri 12 May 2023 01:10:32 AM UTC: 
+ heap.c | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+In file included from test.c:4:
+heap.c: In function ‘heap_pop’:
+heap.c:53:13: error: expected expression before ‘[’ token
+   53 |     int son=[2*i+1];
+      |             ^
+Compilation failed
+5afa6f7
