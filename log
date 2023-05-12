@@ -14,3 +14,9 @@ heap.c:39:42: error: ‘*mon.heapArray’ is used uninitialized [-Werror=uniniti
 cc1: all warnings being treated as errors
 Compilation failed
 adcdd00
+Fri 12 May 2023 12:08:39 AM UTC: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  0|4
+total_score: 0/70
+7a5c5ae
