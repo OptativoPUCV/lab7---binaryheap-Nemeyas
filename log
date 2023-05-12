@@ -167,3 +167,17 @@ heap.c:31:49: error: expected ‘;’ before ‘priority’
       |                                                 ;
 Compilation failed
 c0b9c47
+Fri 12 May 2023 12:24:23 AM UTC: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+heap.c: In function ‘heap_push’:
+heap.c:29:77: error: expected ‘)’ before ‘{’ token
+   29 |   while(i > 0 && pq->heapArray[i].priority > pq->heapArray[(i-1)/2].priority{ //ya no
+      |        ~                                                                    ^
+      |                                                                             )
+heap.c:34:1: error: expected expression before ‘}’ token
+   34 | }
+      | ^
+Compilation failed
+ed528e1
