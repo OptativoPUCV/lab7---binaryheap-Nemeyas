@@ -351,3 +351,14 @@ heap.c:46:41: error: expected ‘;’ before ‘for’
       |   ~~~                                    
 Compilation failed
 f85000d
+Fri 12 May 2023 01:05:57 AM UTC: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+heap.c: In function ‘heap_pop’:
+heap.c:46:34: error: ‘size’ undeclared (first use in this function)
+   46 |   pq->heapArray[0]=pq->heapArray[size-1];
+      |                                  ^~~~
+heap.c:46:34: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+dccaa01
