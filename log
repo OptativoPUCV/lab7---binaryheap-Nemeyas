@@ -38,3 +38,14 @@ Fri 12 May 2023 12:14:25 AM UTC:
  tests:  2|2
 total_score: 20/70
 ab91020
+Fri 12 May 2023 12:16:32 AM UTC: 
+ heap.c | 1 +
+ 1 file changed, 1 insertion(+)
+In file included from test.c:4:
+heap.c: In function ‘heap_push’:
+heap.c:28:7: error: unused variable ‘i’ [-Werror=unused-variable]
+   28 |   int i=pq->size;
+      |       ^
+cc1: all warnings being treated as errors
+Compilation failed
+5c3d2ee
