@@ -43,12 +43,12 @@ void heap_push(Heap* pq, void* data, int priority){
 
 
 void heap_pop(Heap* pq){
+  pq->heapArray[0]=pq->heapArray[pq->size-1];
+  pq->size--;
   if(pq->size==1){
     pq->capac=0;
     return;
   }
-  pq->heapArray[0]=pq->heapArray[pq->size-1];
-  pq->size--;
   for(int i=0; i< pq->size; i++){ 
     int son=2i+1;
     int son2=2i+2;
