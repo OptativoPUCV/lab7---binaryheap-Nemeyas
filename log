@@ -132,3 +132,24 @@ heap.c:28:7: error: unused variable ‘i’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 d4cca96
+Fri 12 May 2023 12:22:00 AM UTC: 
+ heap.c | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+In file included from test.c:4:
+heap.c: In function ‘heap_push’:
+heap.c:29:9: error: expected expression before ‘)’ token
+   29 |   while(){ //pensando en el ciclo
+      |         ^
+heap.c:31:32: error: incompatible types when assigning to type ‘int’ from type ‘heapElem’ {aka ‘struct nodo’}
+   31 |     pq->heapArray[i].priority= pq->heapArray[i]priority;
+      |                                ^~
+heap.c:31:48: error: expected ‘;’ before ‘priority’
+   31 |     pq->heapArray[i].priority= pq->heapArray[i]priority;
+      |                                                ^~~~~~~~
+      |                                                ;
+heap.c:32:33: error: ‘aux’ undeclared (first use in this function)
+   32 |     pq->heapArray[i].priority = aux;
+      |                                 ^~~
+heap.c:32:33: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+d1912af
