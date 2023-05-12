@@ -51,15 +51,17 @@ void heap_pop(Heap* pq){
   pq->size--;
   for(int i=0; i< pq->size; i++){ 
     int son=2*i+1;
-    if(pq->heapArray[son].priority > pq->heapArray[2*i+2].priority){
-      heapElem aux=pq->heapArray[(i-1)/2];
-      pq->heapArray[(i-1)/2] = pq->heapArray[son];
+    int son2=2*i+2;
+    int taita=(i-1)/2;
+    if(pq->heapArray[son].priority > pq->heapArray[son2].priority){
+      heapElem aux=pq->heapArray[taita];
+      pq->heapArray[taita] = pq->heapArray[son];
       pq->heapArray[son] = aux;
     }
     else{
-      heapElem aux=pq->heapArray[(i-1)/2];
-      pq->heapArray[(i-1)/2] = pq->heapArray[2*i+2];
-      pq->heapArray[2*i+2] = aux;
+      heapElem aux=pq->heapArray[taita];
+      pq->heapArray[taita] = pq->heapArray[son2];
+      pq->heapArray[son2] = aux;
     }
   }
 }
