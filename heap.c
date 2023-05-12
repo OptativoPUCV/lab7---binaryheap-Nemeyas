@@ -43,9 +43,9 @@ void heap_push(Heap* pq, void* data, int priority){
 
 
 void heap_pop(Heap* pq){
-  if(pq->capac==pq->size){
-    pq->capac=pq->capac*2+1;
-    pq->heapArray= (heapElem*)realloc(pq->heapArray, pq->capac*sizeof(heapElem));
+  if(pq->size==1){
+    pq->capac=0
+    return NULL;
   }
   pq->heapArray[0]=pq->heapArray[pq->size-1];
   pq->size--;
