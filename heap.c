@@ -36,6 +36,7 @@ Heap* createHeap(){
   Heap* mon = (Heap*) malloc(sizeof(Heap));
   mon->capac=3;
   mon->size=0;
+  mon->heapArray= (heapElem*) realloc(mon->heapArray, sizeof(heapElem)*mon->capac);
 
    return mon;
 }
